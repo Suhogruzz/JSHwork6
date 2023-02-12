@@ -13,7 +13,6 @@ function navMenu () {
                     activeMenu.className = 'menu menu_sub';
                 }
             }
-            console.log(subMenu.classList)
             switch(true) {
                 case !subMenu:
                     return true;
