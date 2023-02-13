@@ -13,6 +13,7 @@ function popupShow() {
     })
     showSuccess.onclick = () => {
         success.classList.add('modal_active');
+        main.classList.remove('modal_active')
     }
 };
 
