@@ -15,18 +15,26 @@ dots.forEach((dot, dotIndex) => {
     dot.addEventListener('click', () => {changeSlide(dotIndex)})
 });
 
+function addActiveDot() {
+    let getDotIndex = [...slides].findIndex(getIndex);
+    dots[getDotIndex].classList.add('slider__dot_active')
+}
+
 function changeSlide(nextSlide) {
     let removeActive =  [...slides].findIndex(getIndex);
 
     slides[removeActive].classList.toggle('slider__item_active');
     dots[removeActive].classList.remove('slider__dot_active');
+
     if (nextSlide >= slides.length) {
         nextSlide = 0;
     }
     if (nextSlide < 0) {
         nextSlide = slides.length - 1;
     }
+    
     slides[nextSlide].classList.toggle('slider__item_active');
     dots[nextSlide].classList.add('slider__dot_active');
 }
 
+addActiveDot();
