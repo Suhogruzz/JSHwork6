@@ -34,7 +34,7 @@ function changeSlide(nextSlide) {
     }
     
     slides[nextSlide].classList.toggle('slider__item_active');
-    dots[nextSlide].classList.add('slider__dot_active');
+    addActiveDot();
 }
 
 addActiveDot();
